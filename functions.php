@@ -16,7 +16,7 @@ add_action( 'genesis_entry_content', 'embed_video', 10 );
 function embed_video() {
 	$rows = get_field( 'embeded_video' );  //this is the ACF instruction to get everything in the repeater field
 	
-	if ( is_single() ) {
+	if ( is_single() || is_page() ) {
 		
 		if($rows) {
 			echo '<div class="video">';
